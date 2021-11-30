@@ -1,4 +1,6 @@
+@import '../color/variables.scss';
+
 .header {
-  background: #2e2e2e;
+  background: $yellow;
   color: #fff;
 }
