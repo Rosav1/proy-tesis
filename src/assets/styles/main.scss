@@ -2,12 +2,11 @@
     Config Initial
    =============================================== */
 :root {
-
   /**
-   * Primary colors
-   *
-   * 3 colors + white +black
-   */
+ * Primary colors
+ *
+ * 3 colors + white +black
+ */
 
   --peid-red: #f15b5b;
   --peid-yellow: #fff800;
@@ -16,10 +15,10 @@
   --peid-white: #ffffff;
 
   /**
-    * Secondary colors
-    *
-    * extra colors
-    */
+  * Secondary colors
+  *
+  * extra colors
+  */
 
   --peid-ligth-grey: #f2f2f2;
   --peid-green: #97cb45;
@@ -27,15 +26,13 @@
   --peid-dar-grey: #adadad;
 
   /**
-    * Util Variables
-    *
-    * another values standar
-    */
+  * Util Variables
+  *
+  * another values standar
+  */
   --peid-padding-lateral: 7.2em;
-  --peid-border-color-input: #C8C8C8;
-  --peid-progress-color:#dadada;
-
-
+  --peid-border-color-input: #c8c8c8;
+  --peid-progress-color: #dadada;
 }
 /**
   * Breakpoints
@@ -52,8 +49,46 @@ $peid-large: 991.98px;
   *.
   * Quicksand: Regular, Bold, Medium
   */
-
-
+@font-face {
+  font-family: 'MRegular';
+  src: url('../fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+  font-family: 'MBold';
+  src: url('../fonts/Montserrat-Bold.ttf');
+}
+@font-face {
+  font-family: 'MSemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf');
+}
+@font-face {
+  font-family: 'MExtraBold';
+  src: url('../fonts/Montserrat-ExtraBold.ttf');
+}
+@font-face {
+  font-family: 'QMedium';
+  src: url('../fonts/Quicksand-Medium.ttf');
+}
+@font-face {
+  font-family: 'QRegular';
+  src: url('../fonts/Quicksand-Regular.ttf');
+}
+@font-face {
+  font-family: 'QBold';
+  src: url('../fonts/Quicksand-Bold.ttf');
+}
+@font-face {
+  font-family: 'RBold';
+  src: url('../fonts/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'RMedium';
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+@font-face {
+  font-family: 'RRegular';
+  src: url('../fonts/Roboto-Regular.ttf');
+}
 
 /**
   * Set general styles
@@ -74,88 +109,98 @@ body {
   font-family: 'MExtraBold', sans-serif;
   font-size: 3.11em;
   line-height: auto;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 1.56em;
   }
-
 }
+
 h1 {
   font-family: 'MExtraBold', sans-serif;
   font-size: 2.9em;
   line-height: auto;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 2.33em;
   }
 }
+
 h2 {
   font-family: 'MExtraBold', sans-serif;
   font-size: 2em;
   line-height: auto;
-  @media (max-width: $peid-small ) {
-    font-size: 2.11px;
+  @media (max-width: $peid-small) {
+    font-size: 2.11;
   }
 }
+
 h3 {
   font-family: 'MExtraBold', sans-serif;
   font-size: 2.67em;
-  @media (max-width: $peid-small ) {
-    font-size:1.89em;
+  @media (max-width: $peid-small) {
+    font-size: 1.89em;
   }
 }
+
 h4 {
   font-family: 'MExtraBold', sans-serif;
-  font-size: 1.33em
+  font-size: 1.33em;
 }
+
 .paragraph-bold {
   font-family: 'QBold', sans-serif;
   font-size: 1.45em;
   line-height: 1.67em;
-  @media (max-width: $peid-small ) {
-    font-size:1.33em;
+  @media (max-width: $peid-small) {
+    font-size: 1.33em;
   }
 }
+
 .paragraph-light {
   font-family: 'QRegular', sans-serif;
   font-size: 1em;
   line-height: 1.67em;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 0.833em;
-    line-height:1.3em;
+    line-height: 1.3em;
   }
 }
+
 .paragraph-bold-small {
   font-family: 'QBold', sans-serif;
   font-size: 1em;
   line-height: 1.67em;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 0.78em;
   }
 }
+
 .subtitle-bold {
   font-family: 'QBold', sans-serif;
-  font-size: 1.11em
+  font-size: 1.11em;
 }
+
 .title-form {
   font-family: 'QMedium', sans-serif;
   font-size: 1em;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 0.8em;
   }
 }
+
 .small-text {
   font-family: 'QMedium', sans-serif;
-  font-size:0.78em
+  font-size: 0.78em;
 }
+
 .date-text {
   font-family: 'QBold', sans-serif;
   font-size: 0.56em;
-  @media (max-width: $peid-small ) {
-    font-size:0.3em;
+  @media (max-width: $peid-small) {
+    font-size: 0.3em;
   }
 }
-a {
 
-  text-decoration:none;
+a {
+  text-decoration: none;
 }
 /**
   * Utils
@@ -164,10 +209,12 @@ a {
   display: flex;
   flex-direction: row;
 }
+
 .column {
   display: flex;
   flex-direction: column;
 }
+
 .text-center {
   text-align: center;
 }
@@ -182,10 +229,10 @@ a {
   font-size: 1.1em;
   padding-top: 0.97em;
   padding-bottom: 0.97em;
-  @media (max-width: $peid-small ) {
+  @media (max-width: $peid-small) {
     font-size: 0.78em;
   }
-  &:disabled{
+  &:disabled {
     background-color: var(--peid-ligth-grey);
     color: var(--peid-dar-grey);
   }
@@ -194,23 +241,27 @@ a {
   transition: all 0.5s ease-out;
   background-color: var(--peid-yellow);
   color: black;
-  a,span,svg {
-    color:black;
-    fill:black
+  a,
+  span,
+  svg {
+    color: black;
+    fill: black;
   }
 
-  &:disabled{
+  &:disabled {
     background-color: var(--peid-ligth-grey);
     color: var(--peid-dar-grey);
     pointer-events: none;
-    a,span,svg {
-      color:var(--peid-dar-grey);
-      fill:var(--peid-dar-grey);
+    a,
+    span,
+    svg {
+      color: var(--peid-dar-grey);
+      fill: var(--peid-dar-grey);
     }
   }
   &:hover {
     transition: all 0.5s ease-out;
-    background-color:black;
+    background-color: black;
     color: var(--peid-yellow);
     a {
       color: var(--peid-yellow);
@@ -222,8 +273,6 @@ a {
       fill: var(--peid-yellow);
     }
   }
-
-
 }
 .btn-aux {
   transition: all 0.5s ease-out;
@@ -238,14 +287,16 @@ a {
     }
   }
   a {
-    color:white;
+    color: white;
   }
 }
+
 .btn-secondary {
   border: 3px solid black;
 }
-input, select{
-  width:100%;
+input,
+select {
+  width: 100%;
   border-radius: 50px;
   outline: none;
   border: 2px solid var(--peid-border-color-input);
@@ -269,41 +320,38 @@ select {
   /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
   background-position: right 1.5em top 50%, 0 0;
   /* icon size, then gradient */
-  background-size: .95em auto, 100%;
+  background-size: 0.95em auto, 100%;
 }
 
 select:required:invalid {
   color: gray;
 }
-option[value=""][disabled] {
+option[value=''][disabled] {
   display: none;
 }
 option {
   color: black;
 }
-input[type=checkbox] + label:before {
+input[type='checkbox'] + label:before {
   border-radius: 0.2em;
   border: 0.3em solid #000;
-
 }
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked) {
+[type='checkbox']:checked,
+[type='checkbox']:not(:checked) {
   position: absolute;
   left: -9999px;
   color: var(--peid-red);
 }
-[type="checkbox"]:checked + label,
-[type="checkbox"]:not(:checked) + label
-{
+[type='checkbox']:checked + label,
+[type='checkbox']:not(:checked) + label {
   position: relative;
   padding-left: 28px;
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
-
 }
-[type="checkbox"]:checked + label:before,
-[type="checkbox"]:not(:checked) + label:before {
+[type='checkbox']:checked + label:before,
+[type='checkbox']:not(:checked) + label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -313,26 +361,26 @@ input[type=checkbox] + label:before {
   border: 2px solid #000;
   background: #fff;
 }
-[type="checkbox"]:checked + label:after,
-[type="checkbox"]:not(:checked) + label:after {
+[type='checkbox']:checked + label:after,
+[type='checkbox']:not(:checked) + label:after {
   content: '\2714';
   /*    background: #00a69c; */
   position: absolute;
   width: 1.5em;
   color: var(--peid-red);
   height: 1.5em;
-  font-size:2.5em;
+  font-size: 2.5em;
   top: -4px;
   left: 0px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-[type="checkbox"]:not(:checked) + label:after {
+[type='checkbox']:not(:checked) + label:after {
   opacity: 0;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type='checkbox']:checked + label:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -348,9 +396,55 @@ input[type=checkbox] + label:before {
   border-radius: 10em;
   /* padding: 10px; */
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
-  @media (max-width: $peid-small ) {
-
+  @media (max-width: $peid-small) {
   }
 }
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--peid-red);
+  background-image: linear-gradient(
+                  center bottom,
+                  rgb(43, 194, 83) 37%,
+                  rgb(84, 240, 84) 69%
+  );
 
+  position: absolute;
+  overflow: hidden;
+}
 
+.meter-alert {
+  margin-top: 0.83em;
+  margin-bottom: 1.38em;
+  height: 5px; /* Can be anything */
+  position: relative;
+  background: var(--peid-progress-color);
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 10em;
+  /* padding: 10px; */
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  @media (max-width: $peid-small) {
+  }
+}
+.meter-alert > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--peid-red);
+  background-image: linear-gradient(
+                  center bottom,
+                  rgb(43, 194, 83) 37%,
+                  rgb(84, 240, 84) 69%
+  );
+
+  position: absolute;
+  overflow: hidden;
+}

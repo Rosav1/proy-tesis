@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Error from '../views/Error.vue'
+import Analysis from "@/views/Analysis";
+import Graphics from "@/views/Graphics";
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -23,6 +26,16 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/analysis-data',
+    name: 'Analysis',
+      component: Analysis
+  },
+  {
+    path: '/analysis-graphics',
+    name: 'AnalysisComponents',
+    component: Graphics
   },
   {
     path: '*',

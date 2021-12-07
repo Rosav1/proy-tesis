@@ -1,16 +1,21 @@
 <template>
-  <NavbarLogin />
-
+  <div>
+  <LoginComponents />
+  </div>
 </template>
 
 <script>
-import NavbarLogin from "@/components/NavbarLogin";
-
+import LoginComponents from '../components/LoginComponents'
 export default {
 name: "Login",
   components: {
-    NavbarLogin
-  }
+    LoginComponents
+  },
+  metaInfo() {
+    return {
+      title: 'Iniciar sesión',
+    }
+  },
 }
 </script>
 
