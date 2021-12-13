@@ -1,39 +1,53 @@
 <template>
-<div class="main">
- <!-- <h1>graficos</h1>
+  <div class="main">
+    <!-- <h1>graficos</h1>
 
   <h2> para {{ valores }}</h2>
   <LineComponent/>-->
 
-<section id="sideMenu">
-  <nav>
-    <a href="#" class="active"><img src="../assets/heydru.svg" alt /></a>
-    <a href="https://www.kaggle.com/datasets" target="_blank"><i class="fa fa-sticky-note-o" aria-hidden="true"></i> What's New</a>
-    <a href="#" @click="generateReport" ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Reporte</a>
-    <a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Comunidad</a>
-    <router-link to="/analysis-data"><i class="fa fa-cog" aria-hidden="true"></i> Salir</router-link>
-  </nav>
-</section>
+    <section id="sideMenu">
+      <nav>
+        <a href="#" class="active"><img src="../assets/heydru.svg" alt /></a>
+        <a href="https://www.kaggle.com/datasets" target="_blank"
+          ><i class="fa fa-sticky-note-o" aria-hidden="true"></i> What's New</a
+        >
+        <a href="#" @click="generateReport"
+          ><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Reporte</a
+        >
+        <a href="#"
+          ><i class="fa fa-user-circle-o" aria-hidden="true"></i> Comunidad</a
+        >
+        <router-link to="/analysis-data"
+          ><i class="fa fa-cog" aria-hidden="true"></i> Salir</router-link
+        >
+      </nav>
+    </section>
 
-<header>
-  <div class="search-area">
-    <i class="fa fa-search" aria-hidden="true"></i>
-    <input type="text" v-model="input" id="valor">
-  </div>
-  <div class="user-area">
-    <a href="#">+ Add</a>
-    <a href="#" class="notification"><i class="fa fa-bell-o" aria-hidden="true"></i>
- <span class="circle">3</span></a>
-    <a href="#">
-      <div class="user-img"></div>
-      <i class="fa fa-caret-down" aria-hidden="true"></i>
-    </a>
-  </div>
-</header>
-<div>
-
-<!-- :paginate-elements-by-height="1400" -->
-  <vue-html2pdf
+    <header>
+      <div class="search-area">
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="text" v-model="input" id="valor" />
+        <router-link to="/analysis-graphics">
+          <button type="button" class="rebusca" v-on:click="procesar">
+            Buscar
+          </button>
+        </router-link>
+      </div>
+      <div class="user-area">
+        <a href="#">+ Add</a>
+        <a href="#" class="notification"
+          ><i class="fa fa-bell-o" aria-hidden="true"></i>
+          <span class="circle">3</span></a
+        >
+        <a href="#">
+          <div class="user-img"></div>
+          <i class="fa fa-caret-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </header>
+    <div>
+      <!-- :paginate-elements-by-height="1400" -->
+      <vue-html2pdf
         :show-layout="false"
         :float-layout="true"
         :enable-download="true"
@@ -45,107 +59,121 @@
         pdf-format="a4"
         pdf-orientation="landscape"
         pdf-content-width="1000px"
- 
         @progress="onProgress($event)"
         @hasStartedGeneration="hasStartedGeneration()"
         @hasGenerated="hasGenerated($event)"
         ref="html2Pdf"
-    >
-<div slot="pdf-content">
-   <div class="row">
-   <div class="column">
-     <center> <h4>Cantidad de Usuarios </h4> </center>
-<UsuariosComponent/>
-   </div>
-   <div class="column">
-
-   </div>
- </div><br>
- <div class="row">
-   <div class="column">
-     <center> <h4>Opiniones Negativas y Positivas (Millones/Mes)  </h4> </center><br>
-<LineComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Cantidad de Opiniones (Mes) </h4> </center> <br>
-<BarComponent/>
-   </div>
- </div><br><br><br>
- <div class="row">
-   <div class="column">
-      <center> <h4>Total de Opiniones Negativas y Positivas</h4> </center> <br>
-<PieComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Emoción denotada</h4> </center> <br>
-     <!-- https://3.bp.blogspot.com/-pSDak_BLlew/X2iP_cAhwaI/AAAAAAAAH3M/YAXFIp29Z0MPYl2pypftOupO6Ff7Oe-lQCLcBGAsYHQ/s1600/Explica%2Bmediante%2Bun%2Btexto%2Bescrito%2Bla%2Bmanera%2Ben%2Bque%2Blos%2Bconflictos%2Bque%2Bexperimentamos%2Ben%2Bla%2Bvida%2Bafectan%2Blas%2Bemociones%2Bel%2Bcomportamiento%2By%2Bla%2Bsalud%2Bde%2Blas%2Bpersonas.png -->
-<RadarComponent/>
-   </div>
- </div>
-  <div class="row">
-   <div class="column">
-      <center> <h4>Palabras más encontradas</h4> </center> <br>
-<WorkcloudComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Países con mayor interacción frente al caso</h4> </center> <br>
-     <div class="vue-world-map">
-<MapComponent /> 
-     </div>
-   </div>
- </div>
-  
-
-</div>
-    </vue-html2pdf>
-   </div>
-<article slot="pdf-content">
-   <div class="row">
-   <div class="column">
-     <center> <h4>Cantidad de Usuarios </h4> </center>
-<UsuariosComponent/>
-   </div>
-   <div class="column">
-
-   </div>
- </div><br>
- <div class="row">
-   <div class="column">
-     <center> <h4>Opiniones Negativas y Positivas (Millones/Mes)  </h4> </center><br>
-<LineComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Cantidad de Opiniones (Mes) </h4> </center> <br>
-<BarComponent/>
-   </div>
- </div>
- <div class="row">
-   <div class="column">
-      <center> <h4>Total de Opiniones Negativas y Positivas</h4> </center> <br>
-<PieComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Emoción denotada</h4> </center> <br>
-     <!-- https://3.bp.blogspot.com/-pSDak_BLlew/X2iP_cAhwaI/AAAAAAAAH3M/YAXFIp29Z0MPYl2pypftOupO6Ff7Oe-lQCLcBGAsYHQ/s1600/Explica%2Bmediante%2Bun%2Btexto%2Bescrito%2Bla%2Bmanera%2Ben%2Bque%2Blos%2Bconflictos%2Bque%2Bexperimentamos%2Ben%2Bla%2Bvida%2Bafectan%2Blas%2Bemociones%2Bel%2Bcomportamiento%2By%2Bla%2Bsalud%2Bde%2Blas%2Bpersonas.png -->
-<RadarComponent/>
-   </div>
- </div>
-  <div class="row">
-   <div class="column">
-      <center> <h4>Palabras más encontradas</h4> </center> <br>
-<WorkcloudComponent/>
-   </div>
-   <div class="column">
-      <center> <h4>Países con mayor interacción frente al caso</h4> </center> <br>
-     <div class="vue-world-map">
-<MapComponent /> 
-     </div>
-   </div>
- </div>
-  
-</article>
-
-</div>
+      >
+        <div slot="pdf-content">
+          <div class="row">
+            <div class="column">
+              <center><h4>Cantidad de Usuarios</h4></center>
+              <UsuariosComponent />
+            </div>
+            <div class="column"></div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="column">
+              <center>
+                <h4>Opiniones Negativas y Positivas (Millones/Mes)</h4>
+              </center>
+              <br />
+              <LineComponent />
+            </div>
+            <div class="column">
+              <center><h4>Cantidad de Opiniones (Mes)</h4></center>
+              <br />
+              <BarComponent />
+            </div>
+          </div>
+          <br /><br /><br />
+          <div class="row">
+            <div class="column">
+              <center><h4>Total de Opiniones Negativas y Positivas</h4></center>
+              <br />
+              <PieComponent />
+            </div>
+            <div class="column">
+              <center><h4>Emoción denotada</h4></center>
+              <br />
+              <!-- https://3.bp.blogspot.com/-pSDak_BLlew/X2iP_cAhwaI/AAAAAAAAH3M/YAXFIp29Z0MPYl2pypftOupO6Ff7Oe-lQCLcBGAsYHQ/s1600/Explica%2Bmediante%2Bun%2Btexto%2Bescrito%2Bla%2Bmanera%2Ben%2Bque%2Blos%2Bconflictos%2Bque%2Bexperimentamos%2Ben%2Bla%2Bvida%2Bafectan%2Blas%2Bemociones%2Bel%2Bcomportamiento%2By%2Bla%2Bsalud%2Bde%2Blas%2Bpersonas.png -->
+              <RadarComponent />
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <center><h4>Palabras más encontradas</h4></center>
+              <br />
+              <WorkcloudComponent />
+            </div>
+            <div class="column">
+              <center>
+                <h4>Países con mayor interacción frente al caso</h4>
+              </center>
+              <br />
+              <div class="vue-world-map">
+                <MapComponent />
+              </div>
+            </div>
+          </div>
+        </div>
+      </vue-html2pdf>
+    </div>
+    <article slot="pdf-content">
+      <div class="row">
+        <div class="column">
+          <center><h4>Cantidad de Usuarios</h4></center>
+          <UsuariosComponent />
+        </div>
+        <div class="column"></div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="column">
+          <center>
+            <h4>Opiniones Negativas y Positivas (Millones/Mes)</h4>
+          </center>
+          <br />
+          <LineComponent />
+        </div>
+        <div class="column">
+          <center><h4>Cantidad de Opiniones (Mes)</h4></center>
+          <br />
+          <BarComponent />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <center>
+            <h4>Total de Opiniones Negativas y Positivas (Millones)</h4>
+          </center>
+          <br />
+          <PieComponent />
+        </div>
+        <div class="column">
+          <center><h4>Emoción denotada</h4></center>
+          <br />
+          <!-- https://3.bp.blogspot.com/-pSDak_BLlew/X2iP_cAhwaI/AAAAAAAAH3M/YAXFIp29Z0MPYl2pypftOupO6Ff7Oe-lQCLcBGAsYHQ/s1600/Explica%2Bmediante%2Bun%2Btexto%2Bescrito%2Bla%2Bmanera%2Ben%2Bque%2Blos%2Bconflictos%2Bque%2Bexperimentamos%2Ben%2Bla%2Bvida%2Bafectan%2Blas%2Bemociones%2Bel%2Bcomportamiento%2By%2Bla%2Bsalud%2Bde%2Blas%2Bpersonas.png -->
+          <RadarComponent />
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <center><h4>Palabras más encontradas</h4></center>
+          <br />
+          <WorkcloudComponent />
+        </div>
+        <div class="column">
+          <center><h4>Países con mayor interacción frente al caso</h4></center>
+          <br />
+          <div class="vue-world-map">
+            <MapComponent />
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
 </template>
 
 
@@ -158,14 +186,14 @@ import RadarComponent from "./RadarComponent.vue";
 import WorkcloudComponent from "./WorkcloudComponent.vue";
 ///////
 import MapComponent from "./MapComponent.vue";
-import chroma from 'chroma-js';
+import chroma from "chroma-js";
 import {
   getDynamicMapCss,
   getBaseCss,
   getCombinedCssString,
-} from './dynamic-map-css';
+} from "./dynamic-map-css";
 import UsuariosComponent from "./UsuariosComponent.vue";
-import VueHtml2pdf from 'vue-html2pdf';
+import VueHtml2pdf from "vue-html2pdf";
 
 export default {
   name: "GraphicsComponents",
@@ -177,21 +205,21 @@ export default {
     WorkcloudComponent,
     MapComponent,
     UsuariosComponent,
-    VueHtml2pdf
+    VueHtml2pdf,
   },
   watch: {
-        countryData() {
+    countryData() {
       this.renderMapCSS();
     },
   },
-    props: {
+  props: {
     lowColor: {
       type: String,
-      default: '#fde2e2',
+      default: "#fde2e2",
     },
     highColor: {
       type: String,
-      default: '#d83737',
+      default: "#d83737",
     },
     countryData: {
       type: Object,
@@ -199,67 +227,99 @@ export default {
     },
     defaultCountryFillColor: {
       type: String,
-      default: '#dadada',
+      default: "#dadada",
     },
     countryStrokeColor: {
       type: String,
-      default: 'black',
+      default: "black",
     },
   },
   data() {
     return {
-    valores: '',
-    node: document.createElement('style'),
-    chromaScale: chroma.scale([this.$props.lowColor, this.$props.highColor]),
-    input: ''
-    }
+      valores: "",
+      node: document.createElement("style"),
+      chromaScale: chroma.scale([this.$props.lowColor, this.$props.highColor]),
+      input: "",
+    };
   },
   methods: {
     renderMapCSS() {
       const baseCss = getBaseCss(this.$props);
-      const dynamicMapCss = getDynamicMapCss(this.$props.countryData, this.chromaScale);
+      const dynamicMapCss = getDynamicMapCss(
+        this.$props.countryData,
+        this.chromaScale
+      );
       this.$data.node.innerHTML = getCombinedCssString(baseCss, dynamicMapCss);
     },
-    generateReport () {
-      this.$refs.html2Pdf.generatePdf()
-    }
+    generateReport() {
+      this.$refs.html2Pdf.generatePdf();
+    },
+    procesar() {
+      //localStorage.setItem("Heydru_keyword", "coronavirus");
+      localStorage.setItem("Heydru_keyword", this.input);
+      //this.$forceUpdate();
+      this.$router.go();
+    },
   },
   mounted() {
-    document.getElementById("valor").value = localStorage.getItem('Heydru_keyword');
+    document.getElementById("valor").value =
+      localStorage.getItem("Heydru_keyword");
     document.body.appendChild(this.$data.node);
     this.renderMapCSS();
-    this.input = JSON.parse(localStorage.getItem('Heydru_keyword'))
-    if(localStorage.getItem('Heydru_keyword') == 'startup'){
-      this.valores = 'Startup'
-    }else if(localStorage.getItem('Heydru_keyword') == 'digitalizacion'){
-      this.valores = 'Digitalizacion'
-    }else if(localStorage.getItem('Heydru_keyword') == 'coronavirus'){
-      this.valores = 'Coronavirus'
-    }else {
-      this.valores = 'Random'
+    this.input = JSON.parse(localStorage.getItem("Heydru_keyword"));
+    if (localStorage.getItem("Heydru_keyword") == "startup") {
+      this.valores = "Startup";
+    } else if (localStorage.getItem("Heydru_keyword") == "digitalizacion") {
+      this.valores = "Digitalizacion";
+    } else if (localStorage.getItem("Heydru_keyword") == "coronavirus") {
+      this.valores = "Coronavirus";
+    } else {
+      this.valores = "Random";
     }
   },
-
-}
+};
 </script>
 
 <style scoped lang="scss">
-
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 $greyLight: #f2f5fa;
 $greyDark: #e7eaf4;
-$purpleLight: #F0216C;
+$purpleLight: #f0216c;
 $purpleDark: white;
 $neonGreen: #062825;
 
+.rebusca {
+  //width: 100%;
+  transition: all 0.5s ease-out;
+  margin-left: 20px;
+  width: 250px;
+
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 12px;
+  font-family: "MBold";
+  font-size: 20px;
+}
+
+.rebusca:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  background: var(--heydru);
+  color: black;
+  text-decoration: underline;
+}
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
-.span-col-2{grid-column: span 2 / auto;}
+.span-col-2 {
+  grid-column: span 2 / auto;
+}
 
 * {
   box-sizing: border-box;
@@ -278,11 +338,10 @@ article {
   float: left;
   width: 100%;
   padding: 10px;
-
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: $greyLight;
 }
 #sideMenu {
@@ -299,7 +358,7 @@ nav {
     padding: 15px;
     border-left: 5px solid transparent;
     color: $greyDark;
-    font-family: 'MBold';
+    font-family: "MBold";
     //font-weight: 300;
     transition: all 1s;
     &.active {
@@ -382,5 +441,4 @@ header {
 #map-svg {
   height: 100%;
 }
-
 </style>
