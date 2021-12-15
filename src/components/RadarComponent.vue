@@ -18,7 +18,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -28,7 +28,7 @@ export default {
               data: [3, 15, 12, 39, 7, 42, 26],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -55,7 +55,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -65,7 +65,7 @@ export default {
               data: [5, 19, 4, 35, 14, 15, 11],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -92,7 +92,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -102,7 +102,7 @@ export default {
               data: [146, 125, 138, 15, 162, 152, 18],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -129,7 +129,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -139,7 +139,7 @@ export default {
               data: [10, 17, 4, 25, 6, 48, 23],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -168,7 +168,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -178,7 +178,7 @@ export default {
               data: [108, 5, 85, 25, 37, 42, 9],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -205,7 +205,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -215,7 +215,7 @@ export default {
               data: [78, 60, 52, 50, 32, 12, 8],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",
@@ -242,7 +242,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Hombres (Millones)",
+              label: "Hombres (Miles)",
               backgroundColor: "rgba(154, 219, 255,0.2)",
               borderColor: "rgba(100, 163, 255)",
               pointBackgroundColor: "rgba(30,144,255)",
@@ -260,7 +260,7 @@ export default {
               ],
             },
             {
-              label: "Mujeres (Millones)",
+              label: "Mujeres (Miles)",
               backgroundColor: "rgba(255,99,132,0.2)",
               borderColor: "rgba(255,99,132,1)",
               pointBackgroundColor: "rgba(255,99,132,1)",

@@ -19,19 +19,19 @@ export default{
     },
         mounted() {
     if(localStorage.getItem('Heydru_keyword') == 'startup'){
-      this.as = '45 M'
+      this.as = '45 m'
     }else if(localStorage.getItem('Heydru_keyword') == 'digitalizacion'){
-      this.as = '70 M'
+      this.as = '70 m'
     }else if(localStorage.getItem('Heydru_keyword') == 'coronavirus'){
-      this.as = '120 M'
+      this.as = '120 m'
     }else if(localStorage.getItem('Heydru_keyword') == 'machine learning') {
-      this.as = '35 M'  
+      this.as = '35 m'  
     }else if(localStorage.getItem('Heydru_keyword') == 'atencion al cliente') {
-      this.as = '68 M'
+      this.as = '68 m'
     }else if(localStorage.getItem('Heydru_keyword') == 'aeropuerto') {
-      this.as = '52 M'  
+      this.as = '52 m'  
     }else {
-      this.as = (Math.floor(Math.random() * (100 - 5)) + 5) + " M" 
+      this.as = (Math.floor(Math.random() * (100 - 5)) + 5) + " m" 
     } 
     }
 }

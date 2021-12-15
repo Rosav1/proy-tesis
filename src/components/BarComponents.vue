@@ -23,7 +23,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [10, 12, 14, 11, 18, 13, 15, 17, 16, 12, 18, 12],
             },
@@ -50,7 +50,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [8, 7, 9, 11, 8, 3, 5, 10, 6, 5, 9, 4],
             },
@@ -77,7 +77,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [68, 51, 76, 64, 71, 75, 80, 64, 72, 70, 65, 43],
             },
@@ -104,7 +104,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [8, 11, 26, 14, 7, 5, 9, 5, 7, 4, 5, 4],
             },
@@ -133,7 +133,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [50, 41, 36, 22, 18, 35, 29, 35, 40, 49, 33, 38],
             },
@@ -160,7 +160,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [40, 25, 36, 12, 8, 5, 9, 5, 10, 9, 13, 28],
             },
@@ -187,7 +187,7 @@ export default {
           ],
           datasets: [
             {
-              label: "Opiniones (M)",
+              label: "Opiniones (m)",
               backgroundColor: "#F0216C",
               data: [
                 Math.floor(Math.random() * (100 - 10)) + 10,

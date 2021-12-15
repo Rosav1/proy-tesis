@@ -76,7 +76,7 @@
           <div class="row">
             <div class="column">
               <center>
-                <h4>Opiniones Negativas y Positivas (Millones/Mes)</h4>
+                <h4>Opiniones Negativas y Positivas (Miles/Mes)</h4>
               </center>
               <br />
               <LineComponent />
@@ -132,7 +132,7 @@
       <div class="row">
         <div class="column">
           <center>
-            <h4>Opiniones Negativas y Positivas (Millones/Mes)</h4>
+            <h4>Opiniones Negativas y Positivas (Miles/Mes)</h4>
           </center>
           <br />
           <LineComponent />
@@ -146,7 +146,7 @@
       <div class="row">
         <div class="column">
           <center>
-            <h4>Total de Opiniones Negativas y Positivas (Millones)</h4>
+            <h4>Total de Opiniones Negativas y Positivas (Miles)</h4>
           </center>
           <br />
           <PieComponent />
