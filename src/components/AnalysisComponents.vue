@@ -4,17 +4,23 @@
   <div class="container register-background">
     <h3 class="text-center register-title">Bienvenido al sistema de Análisis de Sentimiento</h3>
     <div class="container row">
+      <form>
       <div class="container-form">
         <input type="text"  class="title-form" placeholder="Consumer key">
         <input type="text"  class="title-form" placeholder="Consumer Secret">
         <input type="text"  class="title-form" placeholder="Consumer Secret">
         <input type="text"  class="title-form" placeholder="Access Token">
         <input type="text"  class="title-form" placeholder="Access Token Secret">
-        <input type="text"  class="title-form" placeholder="Keyword">
+        <input type="text" v-model="keyword"  class="title-form" placeholder="Keyword">
         <div class="container row" id="finished">
-          <button class="button proccess"><router-link to="/analysis-graphics" style="color: white">Procesar sentimiento</router-link></button>
+          <!-- style="color: white" -->
+   
+          <router-link to="/analysis-graphics" style="color: white; width: 100%; " >
+          <button class="button proccess" v-on:click="procesar" > Procesar sentimiento</button>
+          </router-link>
         </div>
        </div>
+      </form>
 
     <div class="container-image">
       <img src="../assets/g10.svg" alt />
@@ -31,6 +37,16 @@ export default {
   name: "AnalysisComponents",
   components: {
     Navbar
+  },data() {
+    return {
+      keyword: this.value
+    }
+  },methods: {
+    procesar() {
+      //alert(this.keyword)
+      
+      localStorage.setItem('Heydru_keyword',this.keyword);
+    }
   }
 }
 </script>

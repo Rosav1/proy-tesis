@@ -13,11 +13,18 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^2.0.6",
+    "chart.js": "^2.9.4",
+    "chartjs-chart-wordcloud": "^3.6.0",
     "core-js": "^3.6.5",
     "request": "^2.88.2",
     "vue": "^2.6.11",
+    "vue-chartjs": "^3.5.1",
+    "vue-html2pdf": "^1.8.0",
     "vue-meta": "^2.4.0",
-    "vue-router": "^3.5.3"
+    "vue-router": "^3.5.3",
+    "vue-sweetalert2": "^5.0.2",
+    "vue-wordcloud": "^1.1.1",
+    "vue-world-map": "^0.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,6 +36,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "node-sass": "^6.0.1",
     "sass-loader": "^10",
+    "ts-loader": "^9.2.6",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

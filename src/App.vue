@@ -5,4 +5,5 @@
   </div>
 </template>
 
+
 <style src="../src/assets/styles/main.scss" lang="scss"></style>
